@@ -80,14 +80,14 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
-      - file: "site/content/dmmquestions/_index.md"
+      - file: "site/content/questions/_index.md"
         label: "DMM Questions Page"
-        name: "dmmquestions"
+        name: "questions"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
-          - label: Question
-            name: question
+          - label: Questions
+            name: questions
             widget: list
             fields:
               - {label: Heading, name: heading, widget: string}
