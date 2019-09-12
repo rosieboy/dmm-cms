@@ -92,5 +92,5 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: Heading, name: heading, widget: string}
               - {label: "Question Number", name: "question", widget: "number", valueType: "int", min: 1 }
-              - {label: Category, name: text, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
+              - {label: Category, name: category, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
               - {label: Text, name: text, widget: text}
