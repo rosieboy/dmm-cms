@@ -8,7 +8,7 @@ questions:
     text: We believe that our competitive strategy depends on digital.
   - category: Culture
     heading: Our board and our C-level executives back our digital strategy.
-    question: 1
+    question: 2
     text: Our board and our C-level executives back our digital strategy.
   - category: Culture
     heading: We have the right leaders to execute on our digital strategy day to day.
