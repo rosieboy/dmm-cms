@@ -1,5 +1,5 @@
 ---
-title: Great company with a conscience
+title: Great company with a digital conscience
 subtitle: Your digital transformation partner
 image: /img/feature-flower.jpg
 blurb:
