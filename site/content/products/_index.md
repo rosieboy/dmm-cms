@@ -1,6 +1,6 @@
 ---
 title: Our Offer
-image: /img/town-market.jpg
+image: /img/img_0972.jpg
 heading: What we offer
 description: Ninetech is your ultimate partner for digital transformation projects.
 intro:
