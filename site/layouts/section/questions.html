@@ -2,15 +2,6 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cash/4.1.5/cash.min.js"></script>
-<script>
-  $(function () {
-    $('html').addClass ( 'dom-loaded' );
-    $('<footer>Appended with Cash</footer>').appendTo ( document.body );
-  });
-</script>
-
-
 <div class="pb4">
   <form name="dmm" action="" method="POST" data-netlify="true">
       <input type="hidden" id="custId" name="custId" value="3487">
@@ -25,12 +16,44 @@
           <!-- <label><b>We believe that our competitive strategy depends on digital:</b>  -->
             <input type="hidden" id="questionNo" name="questionNo" value="{{ .question }}">
             <input type="hidden" id="section" name="section" value="{{ .category }}">
-          <select name="answer">
+            <fieldset>
+                <legend>Select your answer </legend>
+            <p>
+                <input type = "radio"
+                       name = "answer"
+                       id = "cd"
+                       value = "0"
+                       checked = "checked" />
+                <label for = "cd">Completely disagree</label>
+
+                <input type = "radio"
+                       name = "answer"
+                       id = "sd"
+                       value = "1" />
+                <label for = "sizeMed">Somewhat disagree</label>
+
+                <input type = "radio"
+                      name = "answer"
+                      id = "sa"
+                      value = "2" />
+               <label for = "sizeMed">Somewhat agree</label>
+
+               <input type = "radio"
+                      name = "answer"
+                      id = "ca"
+                      value = "3" />
+              <label for = "sizeMed">Completely agree</label>
+
+              </p>       
+            </fieldset>     
+
+
+<!--           <select name="answer" class="input">
             <option value="0">Completely disagree</option>
             <option value="1">Somewhat disagree</option>
             <option value="2">Somewhat agree</option>
             <option value="3">Completely agree</option>
-          </select></label>
+          </select></label> -->
         </p>
     </blockquote>
   </div>
