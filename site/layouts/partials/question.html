@@ -1,14 +1,16 @@
 <div class="center mb3 ph3">
     <blockquote class="bg-grey-1 primary pa3 mb3 br1 b mw6 center">
-      <p class="f4 mb0">“{{ .text }}”</p>
-      <cite class="tr db grey-3">{{ .question }} – {{ .category }}</cite>
+      <p class="f4 mb0">“{{ .textit }}”</p>
+      <cite class="tr db grey-3">{{ .category }}</cite>
+    </blockquote>
+  </div>
     
   <form name="dmm" method="POST" data-netlify="true">
     <p>
       <!-- <label><b>We believe that our competitive strategy depends on digital:</b>  -->
         <input type="hidden" id="custId" name="custId" value="3487">
         <input type="hidden" id="questionNo" name="questionNo" value="{{ .question }}">
-        <input type="hidden" id="section" name="section" value="{{ .culture }}">
+        <input type="hidden" id="section" name="section" value="{{ .culture}}">
       <select name="answer">
         <option value="0">Completely disagree</option>
         <option value="1">Somewhat disagree</option>
@@ -20,5 +22,3 @@
     </p>
 </form>
 
-</blockquote>
-</div>
