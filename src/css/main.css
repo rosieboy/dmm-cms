@@ -27,9 +27,6 @@
 /* External Library Includes */
 @import './imports/_reset';
 
-/* Anders' modules */
-@import './imports/_select';
-
 /* Modules */
 @import './imports/_box-sizing';
 @import './imports/_images';
