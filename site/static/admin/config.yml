@@ -15,6 +15,18 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "dmmq" 
+    label: "DMM Question"
+    identifier_field: "1234"
+    folder: "site/content/dmmq" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Question", name: "question", widget: "string"}
+      - {label: Category, name: category, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
+      - {label: "Question Number", name: "qnumber", widget: "number"}
+     #  Failed to persist entry: Error: Collection must have a field name that is a valid entry identifier, or must have `identifier_field` set
   - name: "pages"
     label: "Pages"
     files:
@@ -94,15 +106,3 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Question Number", name: "question", widget: "number", valueType: "int", min: 1 }
               - {label: Category, name: category, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
               - {label: Textit, name: textit, widget: text}
-  - name: "dmmq" 
-    label: "DMM Question"
-    identifier_field: "1234"
-    folder: "site/content/dmmq" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Question", name: "question", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: Category, name: category, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
-      - {label: "Number", name: "number", widget: "number"}
-
-     #  Failed to persist entry: Error: Collection must have a field name that is a valid entry identifier, or must have `identifier_field` set
