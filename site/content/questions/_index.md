@@ -1,6 +1,6 @@
 ---
 title: Digital Maturity Model
-image: /img/Ninetech-billboard.jpg
+image: /img/img_8542.jpg
 questions:
   - category: Culture
     heading: We believe that our competitive strategy depends on digital.
