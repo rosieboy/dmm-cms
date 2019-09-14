@@ -11,9 +11,7 @@
           <p class="f4 mb0">“{{ .text }}”</p>
           <cite class="tr db grey-3">{{ .question }} – {{ .category }}</cite>     
             <p>
-                <input type="hidden" id="questionNo" name="questionNo" value="{{ .question }}">
-                <input type="hidden" id="section" name="section" value="{{ .category }}">
-              <select name="answer-{{ .question }}">
+              <select name="question-{{ .question }}">
                 <option value="0">Completely disagree</option>
                 <option value="1">Somewhat disagree</option>
                 <option value="2">Somewhat agree</option>
