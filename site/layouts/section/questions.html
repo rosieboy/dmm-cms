@@ -2,6 +2,8 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
+{{ echoParam .Params "name" }}
+
 <div class="pb4">
   <form name="dmm" action="" method="POST" data-netlify="true">
       <input type="hidden" id="custId" name="custId" value="3487">

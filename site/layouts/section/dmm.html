@@ -1,26 +1,49 @@
-{ define "main" }}
+{{ define "main" }}
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
+ 
+<div class="ph3 bg-off-white">
+    <div class="center mw6 pv3">
 
-{{ partial "4-up" .Params.intro }}
+      {{ .Content }}
 
+      <div class="mb4">
+          <h4 class="f3 b lh-title mb3 tc">Enter information below.
 
-{{ with .Params.main }}
-<div class="mw7 center">
-  <div class="mw6 ph3 mb3">
-    <h3 class="f3 b lh-title mb2">{{ .heading }}</h3>
-    <p>{{ .description }}</p>
+            </h4>
+        
+          <form action="/questions">
+            <div class="flex-l mhn1-l">
+              <!-- Name -->
+              <div class="ph1-l w-50-l">
+                <fieldset>
+                  <input type="text" id="name" name="name" placeholder="Name" class="w-100 mb2" required>
+                  <label for="name">Name</label>
+                </fieldset>
+              </div>
+              <!-- Email -->
+              <div class="ph1-l w-50-l">
+                <fieldset>
+                  <input type="email" id="email" name="email" placeholder="Email" class="w-100 mb2" required>
+                  <label for="email">Email</label>
+                </fieldset>
+              </div>
+              <!-- Assessment # -->
+              <div class="ph1-l w-50-l">
+                  <fieldset>
+                    <input type="text" id="identifierId" name="courseId" placeholder="DMM Identifier" class="w-100 mb2" required>
+                    <label for="identifierId">DMM Identifier</label>
+                  </fieldset>
+                </div>
+            </div>
+            <!-- Button -->
+            <div class="tc">
+              <button type="submit" class="btn w-100 w-auto-ns raise">Continue</button>
+            </div>
+          </form>
+        </div>
+
+    </div>
   </div>
-</div>
-
-<!-- Image grid -->
-{{ partial "image-grid" . }}
-{{ end }}
-
-<div class="pb4">
-  {{ range .Params.testimonials }}
-    {{ partial "blockquote" . }}
-  {{ end }}
-</div>
 
 {{ end }}
