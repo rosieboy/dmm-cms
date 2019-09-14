@@ -13,7 +13,7 @@
             <p>
                 <input type="hidden" id="questionNo" name="questionNo" value="{{ .question }}">
                 <input type="hidden" id="section" name="section" value="{{ .category }}">
-              <select name="answer">
+              <select name="answer-{{ .question }}">
                 <option value="0">Completely disagree</option>
                 <option value="1">Somewhat disagree</option>
                 <option value="2">Somewhat agree</option>
