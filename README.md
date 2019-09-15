@@ -1,3 +1,8 @@
+# Anders'Nintech website
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f48d56b9-9921-4bba-8667-4b3b56c5201e/deploy-status)](https://app.netlify.com/sites/ninetech/deploys)
+
+
 # Hugo template for Netlify CMS with Netlify Identity
 
 This is a small business template built with [Victor Hugo](https://github.com/netlify/victor-hugo) and [Netlify CMS](https://github.com/netlify/netlify-cms), designed and developed by [Darin Dimitroff](http://www.darindimitroff.com/), [spacefarm.digital](https://www.spacefarm.digital).
