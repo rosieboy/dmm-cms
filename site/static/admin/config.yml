@@ -105,4 +105,4 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: "Question Number", name: "question", widget: "number", valueType: "int", min: 1 }
               - {label: Category, name: category, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
-              - {label: Textit, name: textit, widget: text}
+              - {label: Text, name: text, widget: text}
