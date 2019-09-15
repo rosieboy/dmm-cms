@@ -1,6 +1,6 @@
 ---
 title: Digital Maturity Model
-image: /img/img_8542.jpg
+image: /img/feature-ambient city.jpg
 questions:
   - category: Culture
     heading: We believe that our competitive strategy depends on digital.
