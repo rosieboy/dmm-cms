@@ -2,6 +2,6 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
-{{ partial "questions" (dict "nextPage" "oQuestions") }}
+{{ partial "questions" (dict "nextPage" "oQuestions"  "qs" .Params.questions "text" .text "question" .question "category" .category}}
 
 {{ end }}
