@@ -4,6 +4,7 @@
  
 <script>
 
+/* Let's retrieve local storage user data if available */
 var name = localStorage.getItem('myName');
 var email = localStorage.getItem('myEmail');
 var identifierId = localStorage.getItem('identifierId');
@@ -37,21 +38,21 @@ function storeUserData() {
               <!-- Name -->
               <div class="ph1-l w-50-l">
                 <fieldset>
-                  <input type="text" id="name" name="name" placeholder="Name" class="w-100 mb2" required>
+                  <input type="text" id="name" name="name" placeholder="Name" class="w-100 mb2" value="<script> document.write(name); </script>" required>
                   <label for="name">Name</label>
                 </fieldset>
               </div>
               <!-- Email -->
               <div class="ph1-l w-50-l">
                 <fieldset>
-                  <input type="email" id="email" name="email" placeholder="Email" class="w-100 mb2" required>
+                  <input type="email" id="email" name="email" placeholder="Email" class="w-100 mb2" value="<script> document.write(email); </script>" required>
                   <label for="email">Email</label>
                 </fieldset>
               </div>
               <!-- Assessment # -->
               <div class="ph1-l w-50-l">
                   <fieldset>
-                    <input type="text" id="identifierId" name="identifierId" placeholder="DMM Identifier" class="w-100 mb2" required>
+                    <input type="text" id="identifierId" name="identifierId" placeholder="DMM Identifier" value="<script> document.write(identifierId); </script>" class="w-100 mb2" required>
                     <label for="identifierId">DMM Identifier</label>
                   </fieldset>
                 </div>
