@@ -9,7 +9,7 @@
 /* Let's retrieve local storage user data if available */
 function initForm(oForm) {
   idElement = oForm.elements['identifierId'];
-  frmElement.value = localStorage.getItem('identifierId');
+  idElement.value = localStorage.getItem('identifierId');
 
   nameElement = oForm.elements['name'];
   nameElement.value = localStorage.getItem('identifierId');
