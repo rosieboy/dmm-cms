@@ -92,8 +92,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
-      - folder: "site/content/questions"
-        label: "DMM Questions Pages"
+      - file: "site/content/questions/_index.md"
+        label: "DMM Questions Page"
         name: "questions"
         fields:
           - {label: Title, name: title, widget: string}
