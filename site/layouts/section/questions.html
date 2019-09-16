@@ -4,13 +4,14 @@
 
 <script>
 
+/* Let's see what we have in local storage... */
 var name = localStorage.getItem('myName');
 var email = localStorage.getItem('myEmail');
 var identifierId = localStorage.getItem('identifierId');
 
-Document.write(name);
-Document.write(email);
-Document.write(identifierId);
+Document.writeln("<p>Name: " + name + "</p>");
+Document.write("<p>Email: " + email + "</p>");
+Document.write("<p>ID: " + identifierId) + "</p>";
 
 </script>
 
