@@ -5,11 +5,11 @@
 <script>
 
 /* Let's retrieve local storage user data if available */
-var name = localStorage.getItem('myName');
-var email = localStorage.getItem('myEmail');
-var identifierId = localStorage.getItem('identifierId');
+document.forms["userData"]["name"].value = localStorage.getItem('myName');
+document.forms["userData"]["email"].value = localStorage.getItem('myEmail');
+document.forms["userData"]["identifierId"].value = localStorage.getItem('identifierId');
 
-/* Store or update user data in local storage */
+/* Store or update user data in local storage before leaving the page */
 function storeUserData() {
   var x = document.forms["userData"]["name"].value;
   var y = document.forms["userData"]["email"].value;
@@ -38,21 +38,21 @@ function storeUserData() {
               <!-- Name -->
               <div class="ph1-l w-50-l">
                 <fieldset>
-                  <input type="text" id="name" name="name" placeholder="Name" class="w-100 mb2" value="<script> document.write(name); </script>" required>
+                  <input type="text" id="name" name="name" placeholder="Name" class="w-100 mb2" required>
                   <label for="name">Name</label>
                 </fieldset>
               </div>
               <!-- Email -->
               <div class="ph1-l w-50-l">
                 <fieldset>
-                  <input type="email" id="email" name="email" placeholder="Email" class="w-100 mb2" value="<script> document.write(email); </script>" required>
+                  <input type="email" id="email" name="email" placeholder="Email" class="w-100 mb2" required>
                   <label for="email">Email</label>
                 </fieldset>
               </div>
               <!-- Assessment # -->
               <div class="ph1-l w-50-l">
                   <fieldset>
-                    <input type="text" id="identifierId" name="identifierId" placeholder="DMM Identifier" value="<script> document.write(identifierId); </script>" class="w-100 mb2" required>
+                    <input type="text" id="identifierId" name="identifierId" placeholder="DMM Identifier" class="w-100 mb2" required>
                     <label for="identifierId">DMM Identifier</label>
                   </fieldset>
                 </div>
