@@ -1,0 +1,49 @@
+<body onload="initForm(document.forms[0]);">
+
+        <script>
+        
+        /* Update the form to contain also user information */
+        function initForm(oForm) {
+          idElement = oForm.elements['identifierId'];
+          idElement.value = localStorage.getItem('identifierId');
+        
+          nameElement = oForm.elements['name'];
+          nameElement.value = localStorage.getItem('myName');
+        
+          emailElement = oForm.elements['email'];
+          emailElement.value = localStorage.getItem('myEmail');
+        }
+        
+        // document.write("<p>Hey " + name + ", let's go...");
+        // document.write("Your email is " + email + ", and the assessment you are doing is <b>" + identifierId + "</p>");
+        
+        </script>
+        
+        <div class="pb4">
+          <form name="dmm" action="" method="POST" data-netlify="true">
+              <input type="hidden" id="name" name="name">
+              <input type="hidden" id="email" name="email">
+              <input type="hidden" id="identifierId" name="identifierId">
+              {{ range .Params.questions }}
+              <div class="center mb3 ph3">
+                <blockquote class="bg-grey-1 primary pa3 mb3 br1 b mw6 center">
+                  <p class="f4 mb0">“{{ .text }}”</p>
+                  <cite class="tr db grey-3">{{ .question }} – {{ .category }}</cite>     
+                    <p>
+                      <select name="question-{{ .question }}">
+                        <option value="0">Completely disagree</option>
+                        <option value="1">Somewhat disagree</option>
+                        <option value="2">Somewhat agree</option>
+                        <option value="3">Completely agree</option>
+                      </select>
+                    </p>
+                </blockquote>
+              </div>
+              {{ end }}
+            <div class="center mb3 ph3">
+              <blockquote class="bg-grey-1 primary pa3 mb3 br1 b mw6 center">
+                <p>Submit answers and proceed<br/><button class="button" type="submit">Send</button></p>
+              </blockquote>
+            </div>
+          </form>
+        </div>

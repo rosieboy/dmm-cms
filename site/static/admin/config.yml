@@ -92,14 +92,56 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
-      - file: "site/content/questions/_index.md"
+      - file: "site/content/cQuestions/_index.md"
         label: "DMM Questions Page"
-        name: "questions"
+        name: "cultureQuestions"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - label: Questions
-            name: questions
+            name: cultureQuestions
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: "Question Number", name: "question", widget: "number", valueType: "int", min: 1 }
+              - {label: Category, name: category, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
+              - {label: Text, name: text, widget: text}
+      - file: "site/content/oQuestions/_index.md"
+        label: "DMM Questions Page"
+        name: "organizationQuestions"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - label: Questions
+            name: organizationQuestions
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: "Question Number", name: "question", widget: "number", valueType: "int", min: 1 }
+              - {label: Category, name: category, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
+              - {label: Text, name: text, widget: text}
+      - file: "site/content/tQuestions/_index.md"
+        label: "DMM Questions Page"
+        name: "technologyQuestions"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - label: Questions
+            name: technologyQuestions
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: "Question Number", name: "question", widget: "number", valueType: "int", min: 1 }
+              - {label: Category, name: category, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
+              - {label: Text, name: text, widget: text}
+      - file: "site/content/iQuestions/_index.md"
+        label: "DMM Questions Page"
+        name: "insightQuestions"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - label: Questions
+            name: insightQuestions
             widget: list
             fields:
               - {label: Heading, name: heading, widget: string}
