@@ -2,6 +2,15 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
+<script>
+
+    myStorage = window.localStorage;
+
+    localStorage.setItem('myCat', 'Tom');
+
+</script>>
+
+
 {{ partial "short-text" .Params.blurb}}
 
 {{ partial "2-up" .Params }}

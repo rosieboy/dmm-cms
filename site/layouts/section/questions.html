@@ -2,6 +2,19 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
+<script>
+
+var name = localStorage.getItem('myName');
+var email = localStorage.getItem('myEmail');
+var identifierId = localStorage.getItem('identifierId');
+
+Document.write(name);
+Document.write(email);
+Document.write(identifierId);
+
+</script>
+
+
 <div class="pb4">
   <form name="dmm" action="" method="POST" data-netlify="true">
       <input type="hidden" id="custId" name="custId" value="1234">
