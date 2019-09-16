@@ -1,15 +1,22 @@
 {{ define "main" }}
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
- 
+
+<body onload="initForm(document.forms[0]);">
+
 <script>
 
 /* Let's retrieve local storage user data if available */
-oFormObject = document.forms['dmmData'];
+function initForm(oForm) {
+  frmElement = oForm.elements['identifierId'];
+  frmElement.value = localStorage.getItem('identifierId');
+}
 
+/*
 oFormObject.elements["identifierId"].value = localStorage.getItem('identifierId');
 oFormObject.elements["name"].value = localStorage.getItem('myName');
 oFormObject.elements["email"].value = localStorage.getItem('myEmail');
+*/
 
 /* Store or update user data in local storage before leaving the page */
 function storeUserData() {
