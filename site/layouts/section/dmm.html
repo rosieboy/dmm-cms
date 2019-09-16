@@ -8,15 +8,16 @@
 
 /* Let's retrieve local storage user data if available */
 function initForm(oForm) {
-  frmElement = oForm.elements['identifierId'];
+  idElement = oForm.elements['identifierId'];
   frmElement.value = localStorage.getItem('identifierId');
-}
 
-/*
-oFormObject.elements["identifierId"].value = localStorage.getItem('identifierId');
-oFormObject.elements["name"].value = localStorage.getItem('myName');
-oFormObject.elements["email"].value = localStorage.getItem('myEmail');
-*/
+  nameElement = oForm.elements['name'];
+  nameElement.value = localStorage.getItem('identifierId');
+
+  emailElement = oForm.elements['email'];
+  emailElement.value = localStorage.getItem('identifierId');
+
+}
 
 /* Store or update user data in local storage before leaving the page */
 function storeUserData() {
