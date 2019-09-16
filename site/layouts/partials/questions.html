@@ -20,11 +20,11 @@
         </script>
         
         <div class="pb4">
-          <form name="dmm" action="" method="POST" data-netlify="true">
+          <form name="dmm" action="{{ .nextPage }}" method="POST" data-netlify="true">
               <input type="hidden" id="name" name="name">
               <input type="hidden" id="email" name="email">
               <input type="hidden" id="identifierId" name="identifierId">
-              {{ range .Params.questions }}
+              {{ range .qs }}
               <div class="center mb3 ph3">
                 <blockquote class="bg-grey-1 primary pa3 mb3 br1 b mw6 center">
                   <p class="f4 mb0">“{{ .text }}”</p>
