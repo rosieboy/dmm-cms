@@ -2,6 +2,7 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
-{{ partial "questions" (dict "nextPage" "oQuestions" "qs" .Params.questions) }}
+{{ $nextP = "oQuestions"}}
+{{ partial "questions" (dict "np" $nextP "qs" .Params.questions) }}
 
 {{ end }}
