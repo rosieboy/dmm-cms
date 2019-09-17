@@ -94,12 +94,12 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Image, name: imageUrl, widget: image}
       - file: "site/content/cQuestions/_index.md"
         label: "DMM Culture Questions Page"
-        name: "cultureQuestions"
+        name: "cQuestions"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - label: Questions
-            name: cultureQuestions
+            name: cQuestions
             widget: list
             fields:
               - {label: Heading, name: heading, widget: string}
@@ -108,12 +108,12 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Text, name: text, widget: text}
       - file: "site/content/oQuestions/_index.md"
         label: "DMM Organization Questions Page"
-        name: "organizationQuestions"
+        name: "oQuestions"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - label: Questions
-            name: organizationQuestions
+            name: oQuestions
             widget: list
             fields:
               - {label: Heading, name: heading, widget: string}
@@ -122,12 +122,12 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Text, name: text, widget: text}
       - file: "site/content/tQuestions/_index.md"
         label: "DMM Technology Questions Page"
-        name: "technologyQuestions"
+        name: "tQuestions"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - label: Questions
-            name: technologyQuestions
+            name: tQuestions
             widget: list
             fields:
               - {label: Heading, name: heading, widget: string}
@@ -136,12 +136,12 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Text, name: text, widget: text}
       - file: "site/content/iQuestions/_index.md"
         label: "DMM Insight Questions Page"
-        name: "insightQuestions"
+        name: "iQuestions"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - label: Questions
-            name: insightQuestions
+            name: iQuestions
             widget: list
             fields:
               - {label: Heading, name: heading, widget: string}
