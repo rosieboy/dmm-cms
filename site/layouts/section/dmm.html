@@ -2,10 +2,9 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
+<body onload="initForm(document.forms[0]);">
+
 <script>
-
-onload="initForm(document.forms[0]);"
-
 
 /* Let's retrieve local storage user data if available */
 function initForm(oForm) {

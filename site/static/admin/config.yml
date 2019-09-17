@@ -93,7 +93,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
       - file: "site/content/cQuestions/_index.md"
-        label: "DMM Questions Page"
+        label: "DMM Culture Questions Page"
         name: "cultureQuestions"
         fields:
           - {label: Title, name: title, widget: string}
@@ -107,7 +107,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Category, name: category, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
               - {label: Text, name: text, widget: text}
       - file: "site/content/oQuestions/_index.md"
-        label: "DMM Questions Page"
+        label: "DMM Organization Questions Page"
         name: "organizationQuestions"
         fields:
           - {label: Title, name: title, widget: string}
@@ -121,7 +121,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Category, name: category, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
               - {label: Text, name: text, widget: text}
       - file: "site/content/tQuestions/_index.md"
-        label: "DMM Questions Page"
+        label: "DMM Technology Questions Page"
         name: "technologyQuestions"
         fields:
           - {label: Title, name: title, widget: string}
@@ -135,7 +135,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Category, name: category, widget: "select", options: ["Culture", "Organization", "Technology", "Insights"]}
               - {label: Text, name: text, widget: text}
       - file: "site/content/iQuestions/_index.md"
-        label: "DMM Questions Page"
+        label: "DMM Insight Questions Page"
         name: "insightQuestions"
         fields:
           - {label: Title, name: title, widget: string}
