@@ -6,16 +6,16 @@
         function initForm(oForm) {
           idElement = oForm.elements['identifierId'];
           idElement.value = localStorage.getItem('identifierId');
-        
+    
           nameElement = oForm.elements['name'];
           nameElement.value = localStorage.getItem('myName');
-        
+          
           emailElement = oForm.elements['email'];
           emailElement.value = localStorage.getItem('myEmail');
         }
         
-        document.write("<p>Hey " + name + ", let's go...");
-        document.write("Your email is " + email + ", and the assessment you are doing is <b>" + identifierId + "</p>");
+        document.write("<p>Hey " + localStorage.getItem('myName') + ", let's go...");
+        document.write("Your email is " + localStorage.getItem('myEmail') + ", and the assessment you are doing is <b>" + localStorage.getItem('identifierId') + "</p>");
         
         </script>
         
