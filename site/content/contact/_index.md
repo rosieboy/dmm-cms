@@ -1,6 +1,6 @@
 ---
 title: Contact
-logo: /img/logo.svg
+logo: /img/loggo.svg
 contact_entries:
   - heading: Location
     text: 'Kungsgatan 12, Karlstad, Sweden'
