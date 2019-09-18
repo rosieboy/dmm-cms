@@ -2,7 +2,7 @@
 title: Our Offer
 image: /img/img_0972.jpg
 heading: What we offer
-description: Ninetech is your ultimate partner for digital transformation projects.
+description: Rosentech is your ultimate partner for digital transformation projects.
 intro:
   blurbs:
     - image: /img/feature-future.jpg
@@ -16,17 +16,17 @@ intro:
     - image: /img/iStock-625723498.jpg
       text: >-
         Don't hesitate to contact any of our reference customers! They will
-        provide you with the evidence and confidence to work with Ninetech.
+        provide you with the evidence and confidence to work with Rosentech.
     - image: /img/kent-pilcher-553346-unsplash.jpg
       text: >-
         It can get complex and confusing at times. But allow our User Experience
         professionals and User Interface designers to map the user's needs into
         a modern solution that will benefit both you and your customers.
   heading: What we offer
-  description: Ninetech is your ultimate partner for digital transformation projects.
+  description: Rosentech is your ultimate partner for digital transformation projects.
 main:
   heading: Great consultants with no compromises
-  description: "Ninetech is part of a larger group, Combined Excellence. Rest assure that together we can provide the complete puzzle! Be it hosting in the cloud, app development, business intelligence, business process management software, or data law –\_together we are strong and we don't compromise."
+  description: "Rosentech is part of a larger group, Combined Excellence. Rest assure that together we can provide the complete puzzle! Be it hosting in the cloud, app development, business intelligence, business process management software, or data law –\_together we are strong and we don't compromise."
   image1:
     alt: Let us help you fit the pieces together!
     image: /img/feature-building.jpg
@@ -35,7 +35,7 @@ main:
     image: /img/products-grid2.jpg
   image3:
     alt: Bright ideas!
-    image: /img/Ninetech-billboard.jpg
+    image: /img/Rosentech-billboard.jpg
 testimonials: []
 full_image: /img/products-full-width.jpg
 pricing:
