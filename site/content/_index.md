@@ -1,7 +1,7 @@
 ---
 title: Great company with a digital conscience
 subtitle: Your digital transformation partner
-image: /img/feature-flower.jpg
+image: /img/interior-1944348_1920.jpg
 blurb:
   heading: Why Rosentech?
   text: >-
