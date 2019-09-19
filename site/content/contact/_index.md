@@ -1,6 +1,6 @@
 ---
 title: Contact
-logo: /img/loggo.svg
+logo: /img/woman-holding-a-smartphone-3168797_1920.jpg
 contact_entries:
   - heading: Location
     text: 'Kungsgatan 12, Karlstad, Sweden'
