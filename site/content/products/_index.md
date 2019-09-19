@@ -1,23 +1,23 @@
 ---
 title: Our Offer
-image: /img/img_0972.jpg
+image: /img/code-1076536_1920.jpg
 heading: What we offer
 description: Rosentech is your ultimate partner for digital transformation projects.
 intro:
   blurbs:
-    - image: /img/feature-future.jpg
+    - image: /img/laptop-2587070_1920.jpg
       text: >-
         Digital Maturity Model. Assessments and roadmapping and inspiration.
         Let's collaborate and innovate!
-    - image: /img/feature-road ahead full.jpg
+    - image: /img/adult-2449725_1920.jpg
       text: >-
         Let's make the journey together! We have the experience, and we will
         realise the true potential in your business.
-    - image: /img/iStock-625723498.jpg
+    - image: /img/music-4445226_1920.jpg
       text: >-
         Don't hesitate to contact any of our reference customers! They will
         provide you with the evidence and confidence to work with Rosentech.
-    - image: /img/kent-pilcher-553346-unsplash.jpg
+    - image: /img/workplace-1245776_1920.jpg
       text: >-
         It can get complex and confusing at times. But allow our User Experience
         professionals and User Interface designers to map the user's needs into
@@ -29,13 +29,13 @@ main:
   description: "Rosentech is part of a larger group, Combined Excellence. Rest assure that together we can provide the complete puzzle! Be it hosting in the cloud, app development, business intelligence, business process management software, or data law –\_together we are strong and we don't compromise."
   image1:
     alt: Let us help you fit the pieces together!
-    image: /img/feature-building.jpg
+    image: /img/code-3078609_1920.jpg
   image2:
     alt: Coffee...
-    image: /img/products-grid2.jpg
+    image: /img/pins-564775_1920.jpg
   image3:
     alt: Bright ideas!
-    image: /img/Rosentech-billboard.jpg
+    image: /img/people-3370833_1920.jpg
 testimonials: []
 full_image: /img/products-full-width.jpg
 pricing:
