@@ -1,6 +1,6 @@
 ---
 title: Digital Maturity Model
-image: /img/feature-ambient city.jpg
+image: /img/town-market.jpg
 cQuestions:
   - category: Culture
     heading: Hey hoo
