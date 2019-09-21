@@ -26,7 +26,7 @@ intro:
   description: Rosentech is your ultimate partner for digital transformation projects.
 main:
   heading: Great consultants with no compromises
-  description: "Rosentech is part of a larger group, Combined Excellence. Rest assure that together we can provide the complete puzzle! Be it hosting in the cloud, app development, business intelligence, business process management software, or data law –\_together we are strong and we don't compromise."
+  description: "Rosentech is part of a larger group. Rest assure that together we can provide the complete puzzle! Be it hosting in the cloud, app development, business intelligence, business process management software, or data law –\_together we are strong and we don't compromise."
   image1:
     alt: Let us help you fit the pieces together!
     image: /img/code-3078609_1920.jpg
