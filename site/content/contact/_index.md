@@ -3,9 +3,9 @@ title: Contact
 logo: /img/woman-holding-a-smartphone-3168797_1920.jpg
 contact_entries:
   - heading: Location
-    text: 'Kungsgatan 12, Karlstad, Sweden'
+    text: 'Bryggudden, Karlstad, Sweden'
   - heading: Working hours
-    text: 'Monday – Saturday: 8AM – 5PM We’re closed on Saturdays and Sundays'
+    text: 'Monday – Friday: 8 – 15 We’re closed on Saturdays and Sundays'
 ---
 We’d love to get in touch with you and hear your ideas and
 questions. We strive to grow and improve constantly and your feedback
