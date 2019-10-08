@@ -1,15 +1,15 @@
 ---
-title: Great company with a digital conscience
-subtitle: Your digital transformation partner
+title: Vi gör det lite smartare
+subtitle: Din partner i digitalt
 image: /img/interior-1944348_1920.jpg
 blurb:
-  heading: Why Rosentech?
+  heading: Varför Rosentech?
   text: >-
-    We support you through your digital journey! From customer journey mapping,
-    to innovative system solution implementation, and beyond.
+    Vi stöttar dig i din digitala resa. Från analyser och förstudier till färdig
+    lösning.
 intro:
-  heading: What we offer
-  text: "Rosentech offers consultants in all relevant roles –\_from senior business developers to cutting edge developers, and everything in between."
+  heading: Vad vi erbjuder
+  text: 'Konsulttjänster, mjukvarulösningar och integration mellan olika system.'
 products: []
 values:
   heading: Our values
