@@ -23,7 +23,7 @@
 
       // Authorization scopes required by the API; multiple scopes can be
       // included, separated by spaces.
-      var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+      var SCOPES = "https://www.googleapis.com/auth/calendar.events";
 
       var authorizeButton = document.getElementById('authorize_button');
       var signoutButton = document.getElementById('signout_button');
@@ -66,7 +66,8 @@
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
-          listUpcomingEvents();
+          //listUpcomingEvents();
+          insertEvent();
         } else {
           authorizeButton.style.display = 'block';
           signoutButton.style.display = 'none';
@@ -130,6 +131,54 @@
           }
         });
       }
+
+      var event = {
+        'summary': 'Anders fyller',
+        'location': 'Redaretorget 1, 65216 Karlstad, Sverige',
+        'description': 'Fira grabben.',
+        'start': {
+          'dateTime': '2019-12-16T18:00:00+02:00',
+          //'timeZone': 'America/Los_Angeles'
+        },
+        'end': {
+          'dateTime': '2019-12-16T22:00:00+02:00',
+          //'timeZone': 'America/Los_Angeles'
+        },
+        // 'recurrence': [
+        //   'RRULE:FREQ=DAILY;COUNT=2'
+        // ],
+        'attendees': [
+          {'email': 'androsen@gmail.com'}
+        ],
+        'reminders': {
+          'useDefault': false,
+          'overrides': [
+            {'method': 'email', 'minutes': 24 * 60},
+            {'method': 'popup', 'minutes': 10}
+          ]
+        }
+      };
+
+      function insertEvent() {
+        var request = gapi.client.calendar.events.insert({
+          'calendarId': 'v8a9j64pbqa1lah3g8n571p7ak@group.calendar.google.com',
+          'resource': event
+        });
+          request.execute(function(event) {
+          appendPre('Event created: ' + event.htmlLink);
+       });
+      }
+
+    /*   var request = gapi.client.calendar.events.insert({
+        'calendarId': 'primary',
+        'resource': event
+      });
+
+      request.execute(function(event) {
+        appendPre('Event created: ' + event.htmlLink);
+      });
+ */
+
 
     </script>
 
