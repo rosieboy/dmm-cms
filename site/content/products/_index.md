@@ -1,32 +1,34 @@
 ---
-title: Our Offer
+title: Vårt erbjudande
 image: /img/code-1076536_1920.jpg
-heading: What we offer
-description: Rosentech is your ultimate partner for digital transformation projects.
+heading: Vårt erbjudande
+description: >-
+  Rosentech har lång erfarenhet av digitalt förändringsarbete, införande av nya
+  system och arbetssätt.
 intro:
   blurbs:
     - image: /img/laptop-2587070_1920.jpg
       text: >-
-        Digital Maturity Model. Assessments and roadmapping and inspiration.
-        Let's collaborate and innovate!
+        Bokningslösningar där både du och kunden ser tillgängliga tider. Gör det
+        enklare för er båda.
     - image: /img/adult-2449725_1920.jpg
       text: >-
-        Let's make the journey together! We have the experience, and we will
-        realise the true potential in your business.
+        Webbplatser med närvaro. Vi kan erbjuda dig moderna lösningar som ser
+        lika bra ut på en dator som en mobil, och som lirar med Googles verktyg.
     - image: /img/music-4445226_1920.jpg
-      text: >-
-        Don't hesitate to contact any of our reference customers! They will
-        provide you with the evidence and confidence to work with Rosentech.
+      text: Kontakta oss för att få veta mer!
     - image: /img/workplace-1245776_1920.jpg
       text: >-
-        It can get complex and confusing at times. But allow our User Experience
-        professionals and User Interface designers to map the user's needs into
-        a modern solution that will benefit both you and your customers.
-  heading: What we offer
-  description: Rosentech is your ultimate partner for digital transformation projects.
+        Det kan bli komplicerat och förvirrande ibland. Men låt våra erfarna
+        konsulter mappa era användares behov mot moderna systemlösningar som
+        låter både er och era kunder att bli vinnare.
+  heading: Vårt erbjudande
+  description: >-
+    Rosentech har lång erfarenhet av digitalt förändringsarbete, införande av
+    nya system och arbetssätt. Sånt som gör det lättare för er i er vardag.
 main:
-  heading: Great consultants with no compromises
-  description: "Rosentech is part of a larger group. Rest assure that together we can provide the complete puzzle! Be it hosting in the cloud, app development, business intelligence, business process management software, or data law –\_together we are strong and we don't compromise."
+  heading: 'Hey ho, let''s go!'
+  description: "Med den referensen till Ramones kör vi på! Vi gillar rock n roll –\_låt oss leverera något till er som också rockar!"
   image1:
     alt: Let us help you fit the pieces together!
     image: /img/code-3078609_1920.jpg
