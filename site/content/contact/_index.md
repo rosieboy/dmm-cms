@@ -1,18 +1,6 @@
 ---
-title: Contact
-logo: /img/woman-holding-a-smartphone-3168797_1920.jpg
-contact_entries:
-  - heading: Location
-    text: 'Kungsgatan 12, Karlstad, Sweden'
-  - heading: Working hours
-    text: 'Monday – Saturday: 8AM – 5PM We’re closed on Saturdays and Sundays'
+title: Kontakt
+logo: /img/workplace-1245776_1920.jpg
+contact_entries: []
 ---
-We’d love to get in touch with you and hear your ideas and
-questions. We strive to grow and improve constantly and your feedback
-is valuable for us.
-
-<h3 class="f4 b lh-title mb2">How can I get…?</h3>
-
-You can also use the form below for any inquiries, 
-availability, or scheduling a 1-on-1 session
-with our business developers. Don’t be shy, drop us a line!
+Vi vill gärna komma i kontakt med dig och lyssna på dina idéer och höra dina frågor. Vi strävar efter växa och ständigt förbättra oss – din feedback är viktig för oss.
