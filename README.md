@@ -28,6 +28,8 @@ Now you're all set, and you can start editing content!
 
 Clone this repository, and run `yarn` or `npm install` from the new folder to install all required dependencies.
 
+Anders: Using yarn (Netlify uses yarn?)
+
 Then start the development server with `yarn start` or `npm start`.
 
 ## Layouts

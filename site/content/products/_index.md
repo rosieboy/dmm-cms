@@ -24,8 +24,8 @@ intro:
         låter både er och era kunder att bli vinnare.
   heading: Vårt erbjudande
   description: >-
-    Rosentech har lång erfarenhet av digitalt förändringsarbete, införande av
-    nya system och arbetssätt. Sånt som gör det lättare för er i er vardag.
+    Rosentech har lång erfarenhet av digitalt förändringsarbete, införande av nya
+    system och effektivare arbetssätt.  Sånt som gör det lättare för er i er vardag.
 main:
   heading: 'Hey ho, let''s go!'
   description: "Med den referensen till Ramones kör vi på! Vi gillar rock n roll –\_låt oss leverera något till er som också rockar!"
