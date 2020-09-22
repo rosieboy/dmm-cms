@@ -4,7 +4,7 @@ image: /img/code-1076536_1920.jpg
 heading: Vårt erbjudande
 description: >-
   Rosentech har lång erfarenhet av digitalt förändringsarbete, införande av nya
-  system och arbetssätt.
+  system och effektivare arbetssätt.
 intro:
   blurbs:
     - image: /img/laptop-2587070_1920.jpg
