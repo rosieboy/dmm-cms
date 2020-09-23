@@ -1,9 +1,0 @@
-{{ define "main" }}
-
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
-
-{{ $nextP := "tquestions"}}
-
-{{ partial "questions" (dict "np" $nextP "qs" .Params.questions) }}
-
-{{ end }}

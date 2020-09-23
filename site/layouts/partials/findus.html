@@ -1,0 +1,79 @@
+<div class="flex-none justify-left">
+    <div class="mx-2 my-2 rounded-lg bg-gray-100 shadow-lg">
+        <div>
+            <article class="mx-4 sm:mx-12">
+                <div class="px-8 py-2 text-left text-base opacity-75 bg-transparent text-gray-800">
+                    <ul class="">
+                        <li class="list-none font-bold text-xl">Rosentech Datakonsulter</li>
+                        <li class="list-none">Redaretorget 1</li>
+                        <li class="list-none">652 16 Karlstad</li>
+                        <li class="list-none font-bold">Sverige</li>
+                        <li class="list-none mt-2 hover:underline text-xs"><a href="tel:+46730391049">0730 39 10 49</a>
+                        </li>
+                        <li class="list-none hover:underline text-xs"><a
+                                href="mailto:androsen@gmail.com">androsen@gmail.com</a></li>
+                    </ul>
+                    <div id="bottom-banner" class="__TOGGLE_MAP">
+                        <div class="flex justify-center h-16 text-center text-gray-800 cursor-pointer">
+                            <h1 class="text-base mt-3">Visa karta</h1>
+                            <svg version="1.1" class="h-6 mt-4 ml-2 float-right fill-current" id="Chevron_small_down"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                                <path
+                                    d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83 c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z" />
+                            </svg>
+                            <svg version="1.1" class="hidden mt-4 h-6 ml-2 float-right fill-current"
+                                id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20"
+                                enable-background="new 0 0 20 20" xml:space="preserve">
+                                <path
+                                    d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83 c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="map" class="hidden h-80 sm:h-400 w-full mb-10"></div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var mapShown = false;
+
+    // Use bottom-banner to show and hide Google map
+    $(function () {
+        $('.__TOGGLE_MAP').on('click', function () {
+            mapShown = !mapShown;
+            $('#map').slideToggle(500);
+            if (mapShown) {
+                $('#bottom-banner').find('h1').html('Dölj karta');
+            }
+            else {
+                $('#bottom-banner').find('h1').html('Visa karta');
+            }
+            $('#Chevron_small_up').toggleClass("hidden");
+            $('#Chevron_small_down').toggleClass("hidden");
+        });
+    });
+
+    // Initialize and add the Google map
+    function initMap() {
+        // The location of Bryggudden
+        var bryggudden = { lat: 59.375267, lng: 13.510627 };
+        // The map, centered at Bryggudden
+        var map = new google.maps.Map(
+            document.getElementById('map'), { zoom: 12, center: bryggudden });
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({ position: bryggudden, map: map });
+    }
+</script>
+
+<!--Load the API from the specified URL
+            * The async attribute allows the browser to render the page while the API loads
+            * The key parameter will contain your own API key (which is not needed for this tutorial)
+            * The callback parameter executes the initMap() function
+            -->
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBffuWmuUEhFwuPVyPsQbqkJ8YkUtznCcU&callback=initMap">
+</script>
