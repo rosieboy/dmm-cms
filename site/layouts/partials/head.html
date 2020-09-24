@@ -1,6 +1,10 @@
 <head>
 
-  <title>{{ .Title }} | {{ $.Site.Title }}</title>
+ <meta charset="utf-8" />
+    <title> {{ .Title }} </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Style from Tailwind (see separate Tailwind project) -->
   <link href="/tailwind.css" rel="stylesheet">
@@ -41,6 +45,15 @@
   {{ end }}
 
   <style>
+
+		.menu-item {
+            transition-property: border;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+            transition-delay: 0s;
+        }
+
+
 		/*the container must be positioned relative:*/
 		.custom-select {
 		  position: relative;
