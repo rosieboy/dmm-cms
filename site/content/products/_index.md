@@ -24,7 +24,7 @@ intro:
     Digitalisering är viktigt. Alla är vi mer eller mindre digitaliserade i dag, men till vilken grad? Hur digitalt mogna är ni? Låt oss göra en genomlysning.
 main:
   heading: 'Kontakta oss för mer information'
-  description: ""
+  description: "Vi vill gärna komma i kontakt med dig och lyssna på dina idéer och höra dina frågor. Vi strävar efter att göra ett bra jobb och ständigt förbättra oss – din feedback är viktig för oss."
   image1:
     alt: Let us help you fit the pieces together!
     image: /img/code-3078609_1920.jpg
