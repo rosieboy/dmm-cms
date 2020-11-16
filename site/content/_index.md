@@ -1,6 +1,6 @@
 ---
 title: Vi gör det lite smartare
-subtitle: Din partner i digitalt
+subtitle: Din partner i det digitala
 image: /img/interior-1944348_1920.jpg
 blurb:
   heading: Varför Rosentech?
@@ -12,7 +12,7 @@ intro:
   text: 'Konsulttjänster, mjukvarulösningar och integration mellan olika system.'
 products: []
 values:
-  heading: Our values
+  heading: Indexsida
   text: 'IT is an amazing part of our lives. '
 ---
 
