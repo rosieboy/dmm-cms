@@ -17,7 +17,7 @@ intro:
     - image: /img/workplace-1245776_1920.jpg
       text: >-
         Låt oss mappa era användares behov mot moderna systemlösningar som
-        låter både er och era kunder att bli vinnare.
+        låter både er och era kunder bli vinnare.
   heading: Vårt erbjudande
   description: >-
     Rosentech har lång erfarenhet av digitalt förändringsarbete, införande av nya system och effektivare arbetssätt.
