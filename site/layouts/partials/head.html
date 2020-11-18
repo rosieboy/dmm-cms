@@ -1,28 +1,40 @@
 <head>
 
- <meta charset="utf-8" />
-    <title> {{ .Title }} </title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2TV0HE8HCX"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-  <!-- Style from Tailwind (see separate Tailwind project) -->
-  <link href="/tailwind.css" rel="stylesheet">
+		gtag('config', 'G-2TV0HE8HCX');
+	</script>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
-  
-  {{ $stylesheet := .Site.Data.webpack.main }}
-  {{ with $stylesheet.css }}
-    <link href="{{ relURL . }}" rel="stylesheet">
-  {{ end }}
+	<meta charset="utf-8" />
+	<title> {{ .Title }} </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Style from Tailwind (see separate Tailwind project) -->
+	<link href="/tailwind.css" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+
+	{{ $stylesheet := .Site.Data.webpack.main }}
+	{{ with $stylesheet.css }}
+	<link href="{{ relURL . }}" rel="stylesheet">
+	{{ end }}
 
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<base
+		href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
 
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
 
@@ -40,90 +52,82 @@
 	<meta property="og:url" content="/">
 	<meta property="og:image" content="/img/og-image.jpg">
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2TV0HE8HCX"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+	{{ if .IsHome }}
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	{{ end }}
 
-		gtag('config', 'G-2TV0HE8HCX');
-	</script>
-
-  {{ if .IsHome }}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  {{ end }}
-
-  <style>
-
+	<style>
 		.menu-item {
-            transition-property: border;
-            transition-duration: 0.5s;
-            transition-timing-function: linear;
-            transition-delay: 0s;
-        }
+			transition-property: border;
+			transition-duration: 0.5s;
+			transition-timing-function: linear;
+			transition-delay: 0s;
+		}
 
 		/*the container must be positioned relative:*/
 		.custom-select {
-		  position: relative;
-		  font-family: Arial;
+			position: relative;
+			font-family: Arial;
 		}
-		
+
 		.custom-select select {
-		  display: none; /*hide original SELECT element:*/
+			display: none;
+			/*hide original SELECT element:*/
 		}
-		
+
 		.select-selected {
-		  background-color: DodgerBlue;
+			background-color: DodgerBlue;
 		}
-		
+
 		/*style the arrow inside the select element:*/
 		.select-selected:after {
-		  position: absolute;
-		  content: "";
-		  top: 14px;
-		  right: 10px;
-		  width: 0;
-		  height: 0;
-		  border: 6px solid transparent;
-		  border-color: #fff transparent transparent transparent;
+			position: absolute;
+			content: "";
+			top: 14px;
+			right: 10px;
+			width: 0;
+			height: 0;
+			border: 6px solid transparent;
+			border-color: #fff transparent transparent transparent;
 		}
-		
+
 		/*point the arrow upwards when the select box is open (active):*/
 		.select-selected.select-arrow-active:after {
-		  border-color: transparent transparent #fff transparent;
-		  top: 7px;
+			border-color: transparent transparent #fff transparent;
+			top: 7px;
 		}
-		
+
 		/*style the items (options), including the selected item:*/
-		.select-items div,.select-selected {
-		  color: #ffffff;
-		  padding: 8px 16px;
-		  border: 1px solid transparent;
-		  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-		  cursor: pointer;
-		  user-select: none;
+		.select-items div,
+		.select-selected {
+			color: #ffffff;
+			padding: 8px 16px;
+			border: 1px solid transparent;
+			border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+			cursor: pointer;
+			user-select: none;
 		}
-		
+
 		/*style items (options):*/
 		.select-items {
-		  position: absolute;
-		  background-color: DodgerBlue;
-		  top: 100%;
-		  left: 0;
-		  right: 0;
-		  z-index: 99;
+			position: absolute;
+			background-color: DodgerBlue;
+			top: 100%;
+			left: 0;
+			right: 0;
+			z-index: 99;
 		}
-		
+
 		/*hide the items when the select box is closed:*/
 		.select-hide {
-		  display: none;
+			display: none;
 		}
-		
-		.select-items div:hover, .same-as-selected {
-		  background-color: rgba(0, 0, 0, 0.1);
+
+		.select-items div:hover,
+		.same-as-selected {
+			background-color: rgba(0, 0, 0, 0.1);
 		}
-		</style>
+	</style>
 
 
 </head>
