@@ -2,3 +2,4 @@
 
 User-agent: *
 # Disallow: / # If uncommented, no robots should visit this site further
+Disallow: foo.html
