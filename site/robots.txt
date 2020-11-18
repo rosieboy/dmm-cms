@@ -1,0 +1,4 @@
+# robots.txt for http://www.rosentech.se/
+
+User-agent: *
+# Disallow: / # If uncommented, no robots should visit this site further
