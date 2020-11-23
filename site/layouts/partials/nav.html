@@ -4,7 +4,7 @@
         <a href="{{ .Site.Home.Permalink }}" class="hover:border-gray-200">
             <img class="h-12 mr-4" src="/img/loggo.svg">
         </a>
-        <div class="block md:hidden">
+        <div class="block sm:hidden">
             <button id="nav-open" class="flex items-center text-gray-700 hover:text-gray-500" type="button" onclick="navToggle();">
                 <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
@@ -13,7 +13,7 @@
             </button>
         </div>
         <ul id="nav-menu"
-            class="w-full flex-grow md:flex items-center md:w-auto hidden md:block justify-end list-reset mt-2 md:mt-0">
+            class="w-full flex-grow sm:flex items-center sm:w-auto hidden sm:block justify-end list-reset mt-2 sm:mt-0">
 
             {{- /* range .Site.Sections */ -}}
             <!--<li  class="list-none">
