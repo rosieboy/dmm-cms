@@ -67,6 +67,9 @@
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	{{ end }}
 
+	<!-- Include a canonical link -->
+	<link rel="canonical" href="{{ .Permalink }}">
+
 	<style>
 		.menu-item {
 			transition-property: border;

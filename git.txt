@@ -1,0 +1,12 @@
+# View git history
+$ git log --oneline --decorate --graph --all
+
+# This is most commonly used because it will create the branch for you from your current branch and it will switch you to that branch in a single command.
+$ git checkout -b <branch-name>
+
+# Another common way is by using the branch command directly (which checkout does behind the scenes):
+$ git branch <branch-name>
+
+# If you want to work on the branch immediately then you'll need to switch to it manually using the checkout command:
+$ git checkout new-branch
+Switched to branch 'new-branch'
