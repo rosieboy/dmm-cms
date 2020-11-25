@@ -1,8 +1,8 @@
 ---
 title: Vårt erbjudande
+subtitle: Din partner i det digitala
 image: /img/code-1076536_1920.jpg
 heading: Vårt erbjudande
-subtitle: Din partner i det digitala
 intro:
   blurbs:
     - image: /img/laptop-2587070_1920.jpg
