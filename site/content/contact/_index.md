@@ -1,5 +1,5 @@
 ---
-title: Kontakta oss
-subtitle: Din partner i det digitala
+title: Kontakt
+subtitle: Din kontakt med oss börjar här
 image:  /img/workplace-1245776_1920.jpg
 ---

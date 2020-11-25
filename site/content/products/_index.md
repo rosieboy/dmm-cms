@@ -1,6 +1,6 @@
 ---
 title: Vårt erbjudande
-subtitle: Din partner i det digitala
+subtitle: Hur kan vi hjälpa er?
 image: /img/code-1076536_1920.jpg
 heading: Vårt erbjudande
 intro:
