@@ -1,8 +1,8 @@
 ---
-title: Vårt erbjudande
+title: Våra tjänster
 subtitle: Hur kan vi hjälpa er?
 image: /img/code-1076536_1920.jpg
-heading: Vårt erbjudande
+heading: Våra tjänster
 intro:
   blurbs:
     - image: /img/laptop-2587070_1920.jpg
@@ -19,7 +19,7 @@ intro:
       text: >-
         Låt oss mappa era användares behov mot moderna systemlösningar som
         låter både er och era kunder bli vinnare.
-  heading: Vårt erbjudande
+  heading: Våra tjänster
   description: >-
     Rosentech har lång erfarenhet av digitalt förändringsarbete, införande av nya system och effektivare arbetssätt.
     Digitalisering är viktigt. Alla är vi mer eller mindre digitaliserade i dag, men till vilken grad? Hur digitalt mogna är ni? Låt oss göra en genomlysning.
