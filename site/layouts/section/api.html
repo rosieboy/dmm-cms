@@ -1,0 +1,142 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+
+<div class="m-10">
+    <h3 class="h-full text-2xl font-bold">RESTful API Test</h3>
+    <p class="mt-2 text-small">To get sometehing to work with and use as an example, 
+        I have developed a "Consultancy Profile" API. It uses server side Node JS, 
+        JSON, and MongoDB as data storage. Included here is my own profile.</p>
+
+    <!-- Layout of a Consultant Profile/CV (mobile first) -->
+    <div id="A" class="mx-auto">
+        <div id="B" class="m-2 flex-1 rounded-lg">
+            <div id="header" class="flex flex-col md:flex-row justify-between">
+                <div id="photo" class=""><img class="h-32 w-32 rounded-full p-2" src="/img/IMG_0457_small.jpg" /></div>
+                <div id="nametitle" class="md:w-1/2 p-2 text-center md:mt-6">
+                    <span id="name" class="font-bold text-gray-800 text-2xl"></span><br />
+                    <span id="title" class="font-bold text-gray-600 text-xl"></span>
+                </div>
+            </div>
+            <div id="contact" class="text-xs text-gray-600 sm:flex justify-between pl-2 sm:pl-0">
+                <div class="ml-2" id="phone"></div>
+                <div id="email"></div>
+                <div class="mr-2" id="web"></div>
+            </div>
+        </div>
+        <hr />
+        <div id="C" class="m-2 rounded-lg flex flex-col md:flex-row justify-between">
+            <div class="md:w-1/3">
+                <div class="p-2 m-2 text-xs rounded shadow">
+                    <span class="text-indigo-600 text-xl font-bold">Summary</span><br />
+                    <span id="summary" class=""></span>
+                </div>
+                <div class="p-2 m-2 text-xs rounded shadow">
+                    <span class="text-indigo-600 text-xl font-bold">Key Competences</span><br />
+                    <ul id="clist" class="md:list-disc md:ml-4"></ul>
+                </div>
+                <div class="p-2 m-2 text-xs rounded shadow">
+                    <span class="text-indigo-600 text-xl font-bold">Education</span><br />
+                    <ul id="elist" class="list-disc ml-4"></ul>
+                </div>
+                <div class="p-2 m-2 text-xs rounded shadow">
+                    <span class="text-indigo-600 text-xl font-bold">Courses</span><br />
+                    <ul id="courses" class="list-disc ml-4"></ul>
+                </div>
+            </div>
+            <div class="md:w-2/3">
+                <div class="p-2 m-2 rounded shadow">
+                    <span class="text-gray-800 text-xl font-bold">Introduction</span><br />
+                    <span id="intro"></span>
+                </div>
+                <span id="experience"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- First show a list of all consultants registered -->
+    <div id="cpjson"></div>
+
+    <!-- Then show details about the first, or if key was provided, the selected profeil-->
+    <div id="profile" class="font-thin text-xmall border-thin"></div>
+
+    <img class="h-64 shadow" src="/img/MongoREST.png" />
+
+
+<!--
+
+employer
+company
+location
+
+description
+skills
+-->
+
+</div>  
+
+<script>
+
+var request = new XMLHttpRequest()
+
+    request.open('GET', 'https://data.rosentech.se/api/mongo/5fcd0792bc92018d05dc6306', true)
+    request.onload = function () {
+        // Begin accessing JSON data here
+        var data = JSON.parse(this.response)
+
+        // Need to check if we have an array or not...
+        if (request.status >= 200 && request.status < 400) {
+            //data.forEach((profile) => {
+                //console.log(profile.name)
+                document.getElementById("name").innerHTML = data.name;
+                document.getElementById("title").innerHTML = data.title;
+                document.getElementById("phone").innerHTML = "<a href='tel:" + data.phone + "'>" + data.phone + "</a>";
+                document.getElementById("email").innerHTML = "<a href='mailto:" + data.email + "'>" + data.email + "</a>";
+                document.getElementById("web").innerHTML = "<a target='_blank' href='https://" + data.web + "'>" + data.web + "</a>";
+                document.getElementById("intro").innerHTML = data.description;
+                document.getElementById("summary").innerHTML = data.summary;
+                // Competences. Simple array. Need to check if it exist or if it is empty
+                data.competences.forEach(element => {
+                    // Get each education array/object
+                    document.getElementById("clist").innerHTML += 
+                    "<li>"+ element + "</li>";
+                });
+                // Education (array of objects)
+                data.educations.forEach(element => {
+                    document.getElementById("elist").innerHTML += 
+                    "<li><span class='font-bold'>"+ element.degree + "</span><br/>" +
+                    "<span class='italic'>"+ element.field + "</span><br/>" +
+                    "<span>"+ element.school + "</span><br/>" + 
+                    "<span>"+ element.period_from + "-" + element.period_to + "</span></li>";
+                });
+                // Courses (array of objects)
+                data.courses.forEach(element => {
+                    document.getElementById("courses").innerHTML += 
+                    "<li><span class='font-bold'>"+ element.course + "</span><br/>" +
+                    "<span class=''>"+ element.course_provider + ", " + element.year_taken + "</span>";
+                });
+                // Experience (array of objects)
+                data.experience.forEach(element => {
+                    document.getElementById("experience").innerHTML +=
+                    "<div class='p-2 m-2 rounded shadow'>" + 
+                        "<div class='flex flex-row justify-between'>" +
+                        "   <div class='text-gray-800 text-normal font-bold'>" + element.title + "</div><br />" +
+                        "   <div class='font-light text-sm'>" + element.from_month + " " + element.from_year + "-" + element.to_month + 
+                        "   " + element.to_year + "</div>" + 
+                        "</div> <hr />" + 
+                        "<div class='text-small text-gray-800 italic'>" + element.introduction + "</div>" +
+                        "<div class='text-small text-gray-800'>" + element.description + "</div>" +   
+                        "<div class=''>" + element.company + ", " + element.location + "</div>" +                     
+                    "</div>";
+                });
+            //})
+            
+        } else {
+            console.log('error');
+        }
+    }
+    request.send();
+
+</script>
+
+{{ end }}

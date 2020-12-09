@@ -32,6 +32,25 @@ Anders: Using yarn (Netlify uses yarn?)
 
 Then start the development server with `yarn start` or `npm start`.
 
+## REST
+
+Example of building static content from JSON, whenever you want to do that.
+
+```html
+    <ul class="mt-2">
+        {{ $urlPre := "http://localhost:4000/api/mongo" }}
+        {{ $profs := getJSON $urlPre }}
+        {{ range first 2 $profs }}
+            <li><span class="font-bold">Name: </span><a href="{{ ._id }}" target="_blank">{{ .name }}</a></li>
+            <li><span class="font-bold">Email: </span>{{ .email }}</li>
+            <li><span class="font-bold">Mobile: </span>{{ .phone }}</li>
+            <li><span class="font-bold">Occupation: </span>{{ .description }}</li>
+            <li><span class="font-bold">Summary: </span> <span class="font-thin italic">{{ .summary }}</span></li>
+            <li><span class="font-bold">Key Competences: </span>{{ .competences }}</li>
+        {{ end }}
+    </ul>
+```
+
 ## Layouts
 
 The template is based on small, content-agnostic partials that can be mixed and matched. The pre-built pages showcase just a few of the possible combinations. Refer to the `site/layouts/partials` folder for all available partials.
