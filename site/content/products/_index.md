@@ -1,7 +1,7 @@
 ---
 title: Våra tjänster
 subtitle: Hur kan vi hjälpa er?
-image: /img/code-1076536_1920.jpg
+image: /img/girl-869213_1920.jpg
 heading: Våra tjänster
 intro:
   blurbs:
@@ -30,7 +30,7 @@ main:
     alt: Let us help you fit the pieces together!
     image: /img/code-3078609_1920.jpg
   image2:
-    alt: Coffee...
+    alt: Over a cup of coffee!
     image: /img/pins-564775_1920.jpg
   image3:
     alt: Bright ideas!

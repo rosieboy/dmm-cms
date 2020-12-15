@@ -2,6 +2,9 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
+<!-- JS used for code formatting -->
+<script src="/prism.js"></script>
+
 <div class="m-2 sm:m-10">
     <h3 class="h-full text-2xl text-gray-800 font-bold">REST API</h3>
     <p class="mt-2 text-sm">To get sometehing to work with and use as an example, 
@@ -9,19 +12,80 @@
         JSON to implement the API. For data storage I wanted to explore a non-SQL database, 
         so I have used MongoDB.</p>
     
+    <div class="sm:ml-12 sm:mr-12">
+        <pre><code class="language-json">
+                [
+                    {
+                        _id: "5fcd0792bc92018d05dc6306",
+                        name: "Anders Rosén",
+                        email: "androsen@gmail.com",
+                        phone: "+46 73 039 10 49",
+                        competences: [
+                            "Management",
+                            "Sales",
+                            "Programming",
+                            "Software Engineering"
+                        ],
+                        description: "Lorem ipsum dolor sit amet, ...",
+                        summary: "Pellentesque ..."
+                        ...
+            </code></pre>
+    </div>
+    
     <p class="mt-2 text-sm">The frontend parts are built using HTML5, Tailwind CSS, and JavaScript. 
         It should also be fully responive. As an example, below is a profile dynamically created using 
         the API.</p>
 
+    <p class="mt-2 text-sm">Sample Service. This exercise the JSON back and forth between your 
+        browser and the API server. However, data is not stored persistently, only in memory.</p>
+
+            <!-- Subscription form -->
+            <div class="w-full max-w-lg mt-2">
+            
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-name">
+                    Name
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border 
+                    border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white" 
+                    required="required"
+                    id="grid-name" 
+                    type="text" 
+                    name="fullname" 
+                    placeholder="Jane Doe">
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                      Profession
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border 
+                    border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
+                    required="required"
+                    id="grid-profession" 
+                    type="text" 
+                    name="profession" 
+                    placeholder="Programmer">
+                </div>
+            </div>
+            <button onclick="submitFields()" class="flex-shrink-0 bg-indigo-500 hover:bg-indigo-600 border-indigo-600 hover:border-indigo-700 text-sm border-4 text-white py-1 px-2 rounded" name="add-person" value="ADD">
+                Add person 
+            </button>
+
+        </div>
+
+          <!-- List persons in the test CV database -->
+          <div id="cvdata" class=""></div> 
+
     <!-- Layout of a Consultant Profile/CV (mobile first) -->
     <!-- divide-y-1 divide-indigo-600 divide-dashed goes in the first div below but not well with a color filled header -->
     <div id="A" class="mx-auto p-2 rounded shadow-xl bg-gray-100">
-        <div id="B" class="-ml-2 -mr-2 flex-1 bg-indigo-600 rounded">
-            <div id="header" class="flex flex-col sm:flex-row justify-between">
-                <div id="photo" class="">
+        <div id="B" class="-ml-2 -mr-2 sm:flex-1 bg-indigo-600 rounded">
+            <div id="header" class="flex flex-col sm:flex-row sm:justify-between">
+                <div id="photo" class="text-center">
                     <img class="h-32 w-32 rounded-full m-2 border-solid border-4 border-gray-100" src="/img/IMG_0457_small.jpg" />
                 </div>
-                <div id="nametitle" class="md:w-1/2 p-2 text-center mt-6">
+                <div id="nametitle" class="sm:w-1/2 p-2 text-center sm:mt-6">
                     <span id="name" class="font-bold text-gray-100 text-2xl"></span><br />
                     <span id="title" class="capitalize sm:uppercase font-bold text-gray-300"></span>
                 </div>
@@ -75,7 +139,7 @@
 
 <script>
 
-var request = new XMLHttpRequest()
+    var request = new XMLHttpRequest()
 
     var month = new Array();
     month[0] = "Jan";
@@ -155,6 +219,18 @@ var request = new XMLHttpRequest()
         }
     }
     request.send();
+
+    function submitFields() {
+        
+        var http = new XMLHttpRequest();
+        http.open("GET", "https://data.rosentech.se/api/profiles", true);
+        http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        var params = "search=" + "foobar"; // probably use document.getElementById(...).value
+        http.send(params);
+        http.onload = function() {
+            document.getElementById("cvdata").innerHTML += http.responseText;
+        }
+    }
 
 </script>
 
