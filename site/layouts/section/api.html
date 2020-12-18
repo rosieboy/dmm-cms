@@ -5,82 +5,64 @@
 <!-- JS used for code formatting -->
 <script src="/prism.js"></script>
 
+<div class="ml-2 mr-2 sm:ml-12 sm:mr-12 lg:ml-32 lg:mr-32">
+
 <div class="m-2 sm:m-10">
-    <h3 class="h-full text-2xl text-gray-800 font-bold">REST API</h3>
-    <p class="mt-2 text-sm">To get sometehing to work with and use as an example, 
-        I have developed a "Consultancy Profile" API. It uses server side Node JS and
-        JSON to implement the API. For data storage I wanted to explore a non-SQL database, 
-        so I have used MongoDB.</p>
-    
-    <div class="sm:ml-12 sm:mr-12">
-        <pre><code class="language-json">
-                [
-                    {
-                        _id: "5fcd0792bc92018d05dc6306",
-                        name: "Anders Rosén",
-                        email: "androsen@gmail.com",
-                        phone: "+46 73 039 10 49",
-                        competences: [
-                            "Management",
-                            "Sales",
-                            "Programming",
-                            "Software Engineering"
-                        ],
-                        description: "Lorem ipsum dolor sit amet, ...",
-                        summary: "Pellentesque ..."
-                        ...
-            </code></pre>
-    </div>
-    
-    <p class="mt-2 text-sm">The frontend parts are built using HTML5, Tailwind CSS, and JavaScript. 
-        It should also be fully responive. As an example, below is a profile dynamically created using 
-        the API.</p>
+    <h3 class="h-full text-2xl text-gray-800 font-light">REST API</h3>
+    <p class="mt-2 text-sm max-w-full">To get sometehing to work with and use for practice, 
+        I have written a "Consultancy Profile" 
+        <a target="_blank" class="font-light underline hover:text-gray-500" 
+        href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST API</a>. 
+        It uses server side 
+        <a target="_blank" class="font-light underline hover:text-gray-500" href="https://en.wikipedia.org/wiki/Node.js">Node JS</a> and the data interchange format
+        <a target="_blank" class="font-light underline hover:text-gray-500" href="https://en.wikipedia.org/wiki/JSON">JSON</a> 
+        to implement the API. For persistent storage I wanted to explore a <a target="_blank" class="font-light underline hover:text-gray-500" href="https://en.wikipedia.org/wiki/NoSQL">noSQL</a> database,  
+        and went for <a target="_blank" class="font-light underline hover:text-gray-500" href="https://en.wikipedia.org/wiki/JSON">MongoDB</a>.</p>
 
-    <p class="mt-2 text-sm">Sample Service. This exercise the JSON back and forth between your 
-        browser and the API server. However, data is not stored persistently, only in memory.</p>
+        <p class="mt-2 text-sm max-w-full">Since MongoDB is JSON-first (internally BSON, which is binary JSON), it makes it straightforward to be used in a RESTful application. 
+            In other words, objects are both stored and transfered using the same notation.
+        </p>
 
-            <!-- Subscription form -->
-            <div class="w-full max-w-lg mt-2">
-            
-            <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-name">
-                    Name
-                    </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border 
-                    border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white" 
-                    required="required"
-                    id="grid-name" 
-                    type="text" 
-                    name="fullname" 
-                    placeholder="Jane Doe">
-                </div>
-                <div class="w-full md:w-1/2 px-3">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                      Profession
-                    </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border 
-                    border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
-                    required="required"
-                    id="grid-profession" 
-                    type="text" 
-                    name="profession" 
-                    placeholder="Programmer">
-                </div>
-            </div>
-            <button onclick="submitFields()" class="flex-shrink-0 bg-indigo-500 hover:bg-indigo-600 border-indigo-600 hover:border-indigo-700 text-sm border-4 text-white py-1 px-2 rounded" name="add-person" value="ADD">
-                Add person 
-            </button>
-
+        <div class="">
+            <pre class="overflow-y-auto rounded-lg shadow-lg"><code class="language-json">[
+    {
+        _id: "5fcd0792bc92018d05dc6306",
+        name: "Anders Rosén",
+        email: "androsen@gmail.com",
+        phone: "+46 73 039 10 49",
+        competences: [
+            "Management",
+            "Sales",
+            "Programming",
+            "Software Engineering"
+        ],
+        description: "Lorem ipsum dolor sit amet, ...",
+        summary: "Pellentesque ..."
+        ...
+    }
+]</code></pre>
         </div>
-
-          <!-- List persons in the test CV database -->
-          <div id="cvdata" class=""></div> 
+    
+    <p class="mt-8 text-sm max-w-full">The result is dressed up for presentation using 
+        <a target="_blank" class="font-light underline hover:text-gray-500" href="https://en.wikipedia.org/wiki/HTML5">
+            HTML5
+        </a>, 
+        <a target="_blank" class="font-light underline hover:text-gray-500" href="https://tailwindcss.com/">
+            Tailwind CSS
+        </a>, and 
+        <a target="_blank" class="font-light underline hover:text-gray-500" href="https://en.wikipedia.org/wiki/JavaScript">
+            JavaScript
+        </a>. 
+        It should also be fully 
+        <a target="_blank" class="font-light underline hover:text-gray-500" href="https://en.wikipedia.org/wiki/Responsive_web_design">
+            responsive
+        </a>. 
+        As an example, below is a profile dynamically created using the API.</p>
 
     <!-- Layout of a Consultant Profile/CV (mobile first) -->
     <!-- divide-y-1 divide-indigo-600 divide-dashed goes in the first div below but not well with a color filled header -->
-    <div id="A" class="mx-auto p-2 rounded shadow-xl bg-gray-100">
-        <div id="B" class="-ml-2 -mr-2 sm:flex-1 bg-indigo-600 rounded">
+    <div id="A" class="mt-8 mx-auto p-2 rounded shadow-xl bg-gray-100 max-w-screen-md">
+        <div id="B" class="-ml-2 -mr-2 -mt-2 sm:flex-1 bg-indigo-600 rounded">
             <div id="header" class="flex flex-col sm:flex-row sm:justify-between">
                 <div id="photo" class="text-center">
                     <img class="h-32 w-32 rounded-full m-2 border-solid border-4 border-gray-100" src="/img/IMG_0457_small.jpg" />
@@ -130,17 +112,81 @@
     <!-- First show a list of all consultants registered -->
     <div id="cpjson"></div>
 
-    <!-- Then show details about the first, or if key was provided, the selected profeil-->
+    <!-- Then show details about the first, or if key was provided, the selected profile -->
     <div id="profile" class="font-thin text-xmall border-thin"></div>
+
+
+    <h4 class="mt-8 h-full text-xl text-gray-800 font-light">Sample Service</h4>
+    <p class="mt-2 text-sm max-w-full">This is a small demo of the test API, using JSON between the client 
+        browser and the API server. The database is reset each time the backend service restarts.</p>
+
+     <p class="mt-2 text-sm max-w-full">Enter a name and a profession to be stored in databse. 
+         Click on the Id button to delete the entry from the database. 
+         All operations and user interface updates are performed without re-loading the web pag.</p>
+    
+            <!-- Subscription form -->
+            <div class="w-full max-w-lg mt-2">
+            
+            <div class="flex flex-wrap -mx-3 mb-2">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <span class="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2" for="grid-name">
+                    Name
+                    </span>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border 
+                    border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white" 
+                    required="required"
+                    id="grid-name" 
+                    type="text" 
+                    name="fullname" 
+                    placeholder="Jane Doe">
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                    <span class="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2" for="grid-profession">
+                      Profession
+                    </span>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border 
+                    border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
+                    required="required"
+                    id="grid-profession" 
+                    type="text" 
+                    name="profession" 
+                    placeholder="Programmer">
+                </div>
+            </div>
+            <button onclick="submitFields()" class="flex-shrink-0 bg-indigo-500 hover:bg-indigo-600 border-indigo-600 hover:border-indigo-700 text-sm border-4 text-white py-1 px-2 rounded" name="add-person" value="ADD">
+                Add person 
+            </button>
+        </div>
+
+        <h5 class="mt-8 h-full text-lg text-gray-800 font-light">CV Test Database</h5>
+
+        <div class="mt-4 p-4 overflow-y-auto h-52 rounded-lg shadow-lg bg-gray-200">
+            <div class="md:w-3/4 grid grid-cols-5 gap-1">
+                <div>Id</div>
+                <div>Name</div>
+                <div>Profession</div>
+                <div class="col-span-2">Created</div>
+            </div>
+                <div id="prolist" class="md:w-3/4 grid grid-cols-5 gap-1 text-xs">
+            </div>
+        </div>
+
+        <h5 class="mt-8 h-full text-lg text-gray-800 font-light">REST API Console</h5>
+        <!-- Console messages from test API -->
+        <div class="mt-4">
+            <pre class="overflow-y-auto h-32 rounded-lg shadow-lg"><code id="cvdata" class="language-json">REST API return code goes here...</code></pre>
+        </div>
+
+    <h5 class="mt-8 h-full text-lg text-gray-800 font-light">Architecture</h5>
 
     <img class="center mt-6 h-64" src="/img/MongoREST.png" />
 
 </div>  
-
+</div>
 <script>
 
     var request = new XMLHttpRequest()
-
+    var dirty = false;
     var month = new Array();
     month[0] = "Jan";
     month[1] = "Feb";
@@ -158,6 +204,9 @@
 
     request.open('GET', 'https://data.rosentech.se/api/mongo/5fcd0792bc92018d05dc6306', true)
     request.onload = function () {
+
+        // Start by loading test database
+        loadProfiles();
 
         var phone = "<svg xmlns='http://www.w3.org/2000/svg' class='h-3 w-3 mt-1 flex-shrink-0 text-gray-300' viewBox='0 0 24 24' stroke='currentColor'>" +
                     "<path class='text-indigo-600 fill-current' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' />" +
@@ -220,16 +269,98 @@
     }
     request.send();
 
+    function loadProfiles() {
+
+        var http = new XMLHttpRequest();
+
+        console.log("Loading profiles");
+  
+        http.open("GET", "http://localhost:4000/api/profiles", true);
+        // Set the request header i.e. which type of content you are sending 
+        http.setRequestHeader("Content-Type", "application/json"); 
+
+        // Create a state change callback 
+        http.onreadystatechange = function () { 
+            if (http.readyState === 4 && http.status === 200) { 
+                // Print received data from server 
+                // Check if array
+                document.getElementById("prolist").innerHTML = "";
+                var profArrays = JSON.parse(http.responseText);
+                profArrays.forEach(element => {
+                    document.getElementById("prolist").innerHTML += 
+                        "<button class='w-3/4 rounded-full py-0 px-6 hover:bg-red-500 hover:text-gray-200 cursor-pointer' title='Delete' onclick='deleteProfile(" + element.id + ")''>" + element.id + "</button>" + 
+                        "<div class='text-xs'>" + element.name + "</div>" + 
+                        "<div class='text-xs'>" + element.profession + "</div>" +
+                        "<div class='text-xs col-span-2'>" + element.created.substring(0,24) + "...</div>";
+                });
+                //document.getElementById("prolist").innerHTML += "Received from database: " + http.responseText + "\n"; 
+            } 
+            else if (http.status != 200 && http.readyState === 4) {
+                console.log(http);
+                document.getElementById("prolist").innerHTML += "Response: " + http.responseText + ", Status: " + http.statusText + ", State: " + http.readyState + ", Status: " + http.status + "\n";
+            }
+        }; 
+        http.send(); 
+    }
+
     function submitFields() {
         
+        var name = document.getElementById("grid-name").value;
+        var profession = document.getElementById("grid-profession").value;
+
         var http = new XMLHttpRequest();
-        http.open("GET", "https://data.rosentech.se/api/profiles", true);
-        http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        var params = "search=" + "foobar"; // probably use document.getElementById(...).value
-        http.send(params);
-        http.onload = function() {
-            document.getElementById("cvdata").innerHTML += http.responseText;
+  
+        http.open("POST", "http://localhost:4000/api/profiles", true);
+        // Set the request header i.e. which type of content you are sending 
+        http.setRequestHeader("Content-Type", "application/json"); 
+
+        if (!dirty) {
+            document.getElementById("cvdata").innerHTML = "";
+            dirty = true;
         }
+
+        // Create a state change callback 
+        http.onreadystatechange = function () { 
+            if (http.readyState === 4 && http.status === 200) { 
+                // Print received data from server 
+                document.getElementById("cvdata").innerHTML += "Added entry to database: " + http.responseText + "\n";
+                // Reload all profiles for sake of simplicity...
+                loadProfiles();
+            } 
+            else if (http.status != 200 && http.readyState === 4) {
+                document.getElementById("cvdata").innerHTML += "Response: " + http.responseText + ", Status: " + http.statusText + ", State: " + http.readyState + ", Status: " + http.status + "\n";
+            }
+        }; 
+        // Converting JSON data to string 
+        var data = JSON.stringify({ "name": name, "profession": profession }); 
+
+        // Sending data with the request 
+        http.send(data); 
+    }
+
+    function deleteProfile(id) {
+
+        if (!dirty) {
+            document.getElementById("cvdata").innerHTML = "";
+            dirty = true;
+        }
+        
+        var http = new XMLHttpRequest();
+
+        http.open("DELETE", "http://localhost:4000/api/profiles/" + id, true);
+        http.setRequestHeader("Content-Type", "application/json"); 
+
+        // Create a state change callback 
+        http.onreadystatechange = function () { 
+            if (http.readyState === 4 && http.status === 200) { 
+                document.getElementById("cvdata").innerHTML += "Deleted from database: " + http.responseText + "\n";
+                loadProfiles();
+            } 
+            else if (http.status != 200 && http.readyState === 4) {
+                document.getElementById("cvdata").innerHTML += "Response: " + http.responseText + ", Status: " + http.statusText + ", State: " + http.readyState + ", Status: " + http.status + "\n";
+            }
+        }; 
+        http.send(); 
     }
 
 </script>
