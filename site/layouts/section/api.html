@@ -120,9 +120,9 @@
     <p class="mt-2 text-sm max-w-full">This is a small demo of the test API, using JSON between the client 
         browser and the API server. The database is reset each time the backend service restarts.</p>
 
-     <p class="mt-2 text-sm max-w-full">Enter a name and a profession to be stored in databse. 
+     <p class="mt-2 text-sm max-w-full">Enter a name and a profession to be stored in the database. 
          Click on the Id button to delete the entry from the database. 
-         All operations and user interface updates are performed without re-loading the web pag.</p>
+         All operations and user interface updates are performed without re-loading the web page.</p>
     
             <!-- Subscription form -->
             <div class="w-full max-w-lg mt-2">
@@ -275,7 +275,7 @@
 
         console.log("Loading profiles");
   
-        http.open("GET", "http://localhost:4000/api/profiles", true);
+        http.open("GET", "https://data.rosentech.se/api/profiles", true);
         // Set the request header i.e. which type of content you are sending 
         http.setRequestHeader("Content-Type", "application/json"); 
 
@@ -310,7 +310,7 @@
 
         var http = new XMLHttpRequest();
   
-        http.open("POST", "http://localhost:4000/api/profiles", true);
+        http.open("POST", "https://data.rosentech.se/api/profiles", true);
         // Set the request header i.e. which type of content you are sending 
         http.setRequestHeader("Content-Type", "application/json"); 
 
@@ -347,7 +347,7 @@
         
         var http = new XMLHttpRequest();
 
-        http.open("DELETE", "http://localhost:4000/api/profiles/" + id, true);
+        http.open("DELETE", "https://data.rosentech.se/api/profiles/" + id, true);
         http.setRequestHeader("Content-Type", "application/json"); 
 
         // Create a state change callback 
