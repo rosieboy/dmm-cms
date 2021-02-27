@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Verifieringsfil för domänägarskap för Microsoft 365 – placera i webbplatsens rot",
+  "Domain": "rosentech.se",
+  "Id": "7e719864-3680-43c5-beee-5c4c538d01a2"
+}
